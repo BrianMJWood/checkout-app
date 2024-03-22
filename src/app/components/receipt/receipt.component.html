@@ -1,0 +1,9 @@
+<div class="receipt" *ngIf="checkoutService.receipt.totalPrice > 0">
+  <h2>Receipt</h2>
+  <ul>
+    <li *ngFor="let item of checkoutService.receipt.items">
+      {{ item.product.name }} - Quantity: {{ item.quantity }}
+    </li>
+  </ul>
+  <p>Total Price: £{{ checkoutService.receipt.totalPrice }}</p>
+</div>

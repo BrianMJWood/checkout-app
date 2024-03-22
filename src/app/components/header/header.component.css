@@ -1,0 +1,13 @@
+.header {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.deals {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

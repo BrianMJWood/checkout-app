@@ -1,0 +1,10 @@
+<div class="product-creation">
+  <h2>Add Product</h2>
+  <input type="text" [(ngModel)]="newProductName" placeholder="Product Name" />
+  <input
+    type="number"
+    [(ngModel)]="newProductPrice"
+    placeholder="Product Price"
+  />
+  <button (click)="addProduct()">Add</button>
+</div>

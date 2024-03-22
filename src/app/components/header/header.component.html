@@ -1,0 +1,24 @@
+<div class="header">
+  <h1>Checkout App</h1>
+  <div class="deals">
+    <div *ngFor="let deal of currentDeals" class="deal">
+      <strong>{{ deal.product }}</strong
+      >:
+      <ng-container *ngIf="deal.deal === 'BOGOF'">
+        Buy 1 Get 1 Free
+      </ng-container>
+      <ng-container *ngIf="deal.deal === '3for2'">
+        3 for the price of 2
+      </ng-container>
+      <ng-container *ngIf="deal.deal === 'percentageOff'">
+        {{ deal.percentage }}% off
+      </ng-container>
+      <ng-container *ngIf="deal.deal === 'fixedDiscount'">
+        £{{ deal.discount?.toFixed(2) }} off
+      </ng-container>
+      <ng-container *ngIf="deal.deal === 'bulkDiscount'">
+        Buy {{ deal.bulkQuantity }}, get {{ deal.percentage }}% off
+      </ng-container>
+    </div>
+  </div>
+</div>
